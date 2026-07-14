@@ -1,73 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para Sa Iyo</title>
-    <!-- I-link ang iyong CSS file dito -->
-    <link rel="stylesheet" href="style.css"> 
-    
-    <style>
-        /* Disenyo para sa Passcode Overlay Box */
-        #lock-screen {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background-color: #ffe6e6;
-            display: flex; flex-direction: column;
-            justify-content: center; align-items: center;
-            z-index: 9999;
-        }
-        .login-box {
-            background: white; padding: 30px;
-            border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            text-align: center; font-family: sans-serif;
-        }
-        .login-box input {
-            padding: 10px; width: 80%; margin-top: 10px;
-            border: 1px solid #ffb3b3; border-radius: 5px; text-align: center;
-        }
-        .login-box button {
-            margin-top: 15px; padding: 10px 20px;
-            background-color: #ff4d4d; color: white;
-            border: none; border-radius: 5px; cursor: pointer;
-        }
-    </style>
+
+    <title>Happy 6th Month of Love 🤍</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
 
-    <!-- 🔒 ITO ANG LOGIN BOX NA LALABAS SA PHONE AT PC -->
-    <div id="lock-screen">
-        <div class="login-box">
-            <h3 style="color: #ff4d4d;">❤️ Enter Passcode ❤️</h3>
-            <input type="password" id="passcode-input" placeholder="Type here...">
-            <br>
-            <button onclick="checkPasscode()">Submit</button>
-            <p id="error-msg" style="color: red; font-size: 14px; margin-top: 10px; display: none;">Maling passcode! Subukan ulit.</p>
+    <div class="bg"></div>
+
+    <div class="lockscreen">
+
+        <div class="time">
+
+            <h1 id="clock">00:00</h1>
+
+            <p>Happy 6th Month of Love 🤍</p>
+
         </div>
+
+        <h2>Enter Passcode</h2>
+
+        <div class="dots">
+
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </div>
+
+        <div class="keypad">
+
+            <button onclick="press(1)">1</button>
+            <button onclick="press(2)">2</button>
+            <button onclick="press(3)">3</button>
+
+            <button onclick="press(4)">4</button>
+            <button onclick="press(5)">5</button>
+            <button onclick="press(6)">6</button>
+
+            <button onclick="press(7)">7</button>
+            <button onclick="press(8)">8</button>
+            <button onclick="press(9)">9</button>
+
+            <div></div>
+
+            <button onclick="press(0)">0</button>
+
+            <button onclick="erase()">⌫</button>
+
+        </div>
+
+        <p id="wrong"></p>
+
     </div>
 
-    <!-- 🎈 ANG IYONG ORIGINAL NA NILALAMAN (MGA PUSO, KANTA, LARAWAN) -->
-    <div id="main-content">
-        <!-- Ilagay mo rito ang dating code ng iyong index.html (mga puso, player, etc.) -->
-    </div>
+    <script src="script.js"></script>
 
-    <!-- 📜 ANG JAVASCRIPT NA GAGANA SA PHONE AT PC -->
-    <script>
-        function checkPasscode() {
-            var input = document.getElementById("passcode-input").value;
-            var tamangPasscode = "1234"; // Palitan mo ito ng totoong password mo!
-
-            if (input === tamangPasscode) {
-                // Itatago ang login screen kapag tama ang password
-                document.getElementById("lock-screen").style.display = "none";
-            } else {
-                // Ipakita ang error message kung mali
-                document.getElementById("error-msg").style.display = "block";
-            }
-        }
-    </script>
-    
-    <!-- I-link ang hiwalay mong JS file kung may animation doon -->
-    <script src="script.js"></script> 
 </body>
+
 </html>
